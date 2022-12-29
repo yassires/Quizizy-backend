@@ -1,0 +1,221 @@
+.card2 .justify, .card2 .userch, .card2 .correctAnswer {
+  color: rgb(211, 211, 211);
+  font-weight: 600;
+  padding: 20px 10px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+* {
+  font-family: "Cairo", sans-serif;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  background: #404258;
+}
+body .card3 {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: #50577A;
+  transition: 0.3s;
+  width: 60%;
+  margin: auto;
+  height: 100%;
+  border-radius: 5px;
+}
+body .card3:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+body .card3 .icon {
+  margin-top: 15px;
+  padding: 15px 15px;
+}
+body .card3 .icon i {
+  font-size: 20px;
+  color: aliceblue;
+}
+body .card3 .button-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+body .card3 .button-container #yn {
+  color: #404258;
+  padding: 8px;
+}
+body .card3 .button-container .start {
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 3px;
+  border-style: none;
+}
+body .card3 .button-container .pd {
+  padding: 15px;
+}
+body .card3 .button-container .pd #note {
+  color: aliceblue;
+}
+body .card3 #start {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+body .card3 #start #yn {
+  width: 60%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  color: rgb(29, 39, 46);
+  padding-bottom: 30px;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: #50577A;
+  transition: 0.3s;
+  width: 95%;
+  margin: auto;
+  height: 100%;
+  border-radius: 5px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card #question .quiz-area h2 {
+  display: flex;
+  width: 100%;
+  color: aliceblue;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.card #question .answers-area {
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.card #question .answers-area .answer {
+  cursor: pointer;
+  width: 80%;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.card #question .answers-area .answer:hover {
+  background-color: aliceblue;
+  color: #404258;
+  transition: 0.5s;
+  font-weight: bold;
+  width: 85%;
+}
+.card #question .answers-area .answer #answers {
+  width: 80%;
+  height: 30px;
+  opacity: 0;
+}
+.card #question .answers-area .active {
+  background-color: aliceblue;
+  font-weight: bolder;
+  color: #404258;
+}
+.card .button {
+  display: flex;
+  height: 60px;
+  width: 95%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  margin-top: 2rem;
+  background: #404258;
+  color: aliceblue;
+  border-radius: 5px;
+}
+.card .button:hover {
+  -webkit-animation: pulse;
+          animation: pulse;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+.card .quiz {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding: 20px;
+  color: aliceblue;
+}
+.card .icon {
+  margin-top: 15px;
+  padding: 15px 15px;
+}
+.card .icon i {
+  font-size: 20px;
+  color: aliceblue;
+}
+
+.btnSubmit {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+.btnSubmit #submit {
+  height: 50px;
+  width: 30%;
+  color: black !important;
+  font-weight: bold;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.631372549);
+  transition: 0.3s;
+  width: 95%;
+  margin: auto;
+  height: 100%;
+  border-radius: 5px;
+}
+.card2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card2 .icon {
+  margin-top: 15px;
+  padding: 15px 15px;
+}
+.card2 .icon i {
+  font-size: 20px;
+  color: #404258;
+}
+.card2 .title {
+  display: flex;
+  justify-content: center;
+}
+.card2 #result {
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+}
+.card2 #result .resultSection {
+  border-bottom: #404258;
+}
+.card2 .correctAnswer {
+  background-color: rgb(19, 131, 19);
+  margin: 0 0 12px 0;
+}
+.card2 .userch {
+  background-color: rgb(185, 19, 19);
+  margin: 0 0 12px 0;
+}
+.card2 .justify {
+  background-color: rgb(224, 215, 125);
+  margin: 0 0 12px 0;
+  color: #404258;
+}/*# sourceMappingURL=style.css.map */
