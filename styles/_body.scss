@@ -33,7 +33,6 @@ background: #404258;
     .button-container{
       display: flex;
       justify-content: center;
-      padding-top: 10px;
         #yn{
           color: #404258;
           padding: 8px;
@@ -48,6 +47,9 @@ background: #404258;
           padding: 15px;
           #note{
             color: aliceblue;
+          }
+          .rules{
+           color: #ff9c00;
           }
         }
     }
@@ -108,6 +110,7 @@ nav{
       width: 80%;
       border: 1px solid #ffffff;
       border-radius: 5px;
+      position: relative;
       font-weight: bold;
       padding: 20px;
       margin-bottom:  10px;
@@ -116,12 +119,14 @@ nav{
         color: #404258;
         transition: 0.5s;
         font-weight: bold;
-        width: 85%;
+        width: 81%;
       }
       #answers{
-        width: 80%;
-        height: 30px;
-        // opacity: 0;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        opacity: 0;
       }
       .answersQuestion{
         display: flex;

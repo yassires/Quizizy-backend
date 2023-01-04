@@ -1,9 +1,10 @@
 let DATA;
 let j;
-fetch("qz.json")
+fetch("http://localhost/Quizizy/script.php")
     .then((data) => data.json())
     .then((data) => {
-        DATA = data.quiz[0];
+        // console.log(data.quiz);
+        DATA = data;
         j = DATA.questions.sort(()=>Math.random() - 0.5);
     })
 var time = 0;
@@ -20,6 +21,7 @@ start_btn[0].addEventListener("click", function (e) {
     clearInterval(interval);
     afficher_question(DATA.questions[index]);
     for (let i = 0; i < elements.length; i++) {
+        elements[i].classList.remove("active");
         elements[i].addEventListener("click", function (e) {
           elements[i].classList.toggle("active");
         });

@@ -34,15 +34,14 @@ class QuizModel extends DB
     public function getAllQuestions()
     {
         try {
-            $sql = "SELECT answer , question_id FROM answers,questions
-            WHERE answers.question_id = questions.id" ;
-            $a_stmt = $this->connect()->prepare($sql);
+            $sql = "SELECT id, correct, comment FROM answer";
+            $a_stmt = $this->Connect()->prepare($sql);
 
-            // $sql = "SELECT question-id, id, content FROM options";
-            // $o_stmt = $this->connect()->prepare($sql);
+            $sql = "SELECT `question-id`, id, content FROM options";
+            $o_stmt = $this->Connect()->prepare($sql);
 
-            $sql = "SELECT id , question FROM questions";
-            $stmt = $this->connect()->prepare($sql);
+            $sql = "SELECT * FROM `questions`";
+            $stmt = $this->Connect()->prepare($sql);
 
             if ($stmt->execute()) {
 
@@ -50,38 +49,30 @@ class QuizModel extends DB
                 $obj->title = "AWS - Quiz";
                 $obj->description = "AWS Certified Cloud Practitioner (CLF-C01) Sample Exam Questions";
                 // $obj = (object)$stmt->fetch();
-
                 $questions_array = [];
-
-
                 while ($question = $stmt->fetch()) {
-                    // $options_array = [];
-                    $answers_array = [];
-                    // $o_stmt->execute();
+                    $Q = (object)$question;
+                    $options_array = [];
+                    $o_stmt->execute();
                     $a_stmt->execute();
-                    // while ($option = $o_stmt->fetch()) {
-                    //     if ($option['question-id'] == $question['id']) {
-                    //         $options_array[] = (object)$option;
-                    //     }
-                    // }
-                    while ($answer = $a_stmt->fetch()) {
-                        if ($answer['question_id'] == $question['id']) {
-                            $answers_array[] = (object)$answer;
+                    while ($option = $o_stmt->fetch()) {
+                        if ($option['question-id'] == $question['id']) {
+                            $options_array[] = (object)$option;
                         }
                     }
-                    $Q = (object)$question;
-                    // $Q->options = $options_array;
-                    $Q->answer = $answers_array;
+                    while ($answer = $a_stmt->fetch()) {
+                        if ($answer['id'] == $question['id']) {
+                            $Q->answer = (object)$answer;
+                        }
+                    }
+                    $Q->options = $options_array;
                     $questions_array[] = $Q;
-                    // print_r($questions_array);
                 }
-
-
 
                 $obj->questions = $questions_array;
                 return json_encode($obj, JSON_PRETTY_PRINT);
-                // echo $tt;
             } else {
+
                 return false;
             }
         } catch (PDOException $e) {

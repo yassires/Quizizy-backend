@@ -38,7 +38,6 @@ body .card3 .icon i {
 body .card3 .button-container {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
 }
 body .card3 .button-container #yn {
   color: #404258;
@@ -55,6 +54,9 @@ body .card3 .button-container .pd {
 }
 body .card3 .button-container .pd #note {
   color: aliceblue;
+}
+body .card3 .button-container .pd .rules {
+  color: #ff9c00;
 }
 body .card3 #start {
   display: flex;
@@ -101,10 +103,10 @@ nav {
   align-items: center;
 }
 .card #question .answers-area .answer {
-  cursor: pointer;
   width: 80%;
   border: 1px solid #ffffff;
   border-radius: 5px;
+  position: relative;
   font-weight: bold;
   padding: 20px;
   margin-bottom: 10px;
@@ -114,12 +116,18 @@ nav {
   color: #404258;
   transition: 0.5s;
   font-weight: bold;
-  width: 85%;
+  width: 81%;
 }
 .card #question .answers-area .answer #answers {
-  width: 80%;
-  height: 30px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 100%;
   opacity: 0;
+}
+.card #question .answers-area .answer .answersQuestion {
+  display: flex;
+  align-items: center;
 }
 .card #question .answers-area .active {
   background-color: aliceblue;
