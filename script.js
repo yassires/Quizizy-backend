@@ -1,9 +1,14 @@
+const one = document.querySelector(".one");
+const two = document.querySelector(".two");
+const three = document.querySelector(".three");
+
+
+
 let DATA;
 let j;
 fetch("http://localhost/Quizizy/script.php")
     .then((data) => data.json())
     .then((data) => {
-        // console.log(data.quiz);
         DATA = data;
         j = DATA.questions.sort(()=>Math.random() - 0.5);
     })
@@ -26,6 +31,7 @@ start_btn[0].addEventListener("click", function (e) {
           elements[i].classList.toggle("active");
         });
       }
+      two.classList.add('active');
     index++;
 })
 
@@ -65,6 +71,7 @@ function endQuiz(index){
         next_btn.remove()
         clearInterval(interval);
         ver()
+        three.classList.add('active');
         console.log(list);
 
     }
@@ -187,10 +194,6 @@ let score=0;
                                 </div>
                                 
                                 `
-            // result.innerHTML += '<h2>'+DATA.questions[i].content+'</h2>'
-            // result.innerHTML += '<p class="userch">'+list[i]+'</p>'
-            // result.innerHTML += '<p class="correctAnswer">' + DATA.questions[i].answer.correct +'</p> <br>'
-            // result.innerHTML += '<p class="justify">' + DATA.questions[i].answer.comment +'</p> <br>'
         }
     }
   }

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
     <!-- CSS only -->
     <title>Quizizy™</title>
 </head>
@@ -19,6 +21,39 @@
     <nav>
         <img src="../img/aws.png" style="width: 200px;" alt="Logo">
     </nav>
+    <div class="stepper_compenent">
+        <!--stepper -->
+    <div class="stepper">
+            <ul id="prog">
+                <li>
+                    <i class="icon uil uil-user-exclamation"></i>
+                    <div class="progress one active">
+                        <p class="number">1</p>
+                        <i class="uil uil-check"></i>
+                    </div>
+                    <p class="step">Informations</p>
+                </li>
+                <li>
+                    <i class="icon uil uil-file-question-alt"></i>
+                    <div class="progress two">
+                        <p class="number">2</p>
+                        <i class="uil uil-check"></i>
+                    </div>
+                    <p class="step">Quiz</p>
+                </li>
+                <li>
+                    <i class="icon uil uil-trophy"></i>
+                    <div class="progress three">
+                        <p class="number">3</p>
+                        <i class="uil uil-check"></i>
+                    </div>
+                    <p class="step">Résultats</p>
+                </li>
+            </ul>
+        </div>
+    <!-- -->
+    </div>
+    
 
     <div class="card">
         <div class="icon">
@@ -55,9 +90,6 @@
                     <button class="start">Let's Goo</button>
                 </div>
             </div>
-
-            
-
             <!-- <a href="" id="start">Let's Goo</a> -->
         </div>
     </div>
