@@ -86,7 +86,7 @@ body .card3 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background: #50577A;
   transition: 0.3s;
-  width: 60%;
+  width: 90%;
   margin: auto;
   height: 100%;
   border-radius: 5px;
@@ -146,6 +146,7 @@ nav {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background: #50577A;
   transition: 0.3s;
+  padding: 10px;
   width: 95%;
   margin: auto;
   height: 100%;
@@ -294,3 +295,10 @@ nav {
   margin: 0 0 12px 0;
   color: #404258;
 }/*# sourceMappingURL=style.css.map */
+@media(max-width: 600px) {
+
+  body .stepper_compenent .stepper {
+    display: none;
+  }
+}
+  
